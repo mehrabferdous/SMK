@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+ 
+    <!-- =======card-slider-css -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="card-slider-style.css" />
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="nav-styles.css" />
+   <link rel="stylesheet" href="footer-style.css" />
+    <!-- ==========donation css=========== -->
+
+    <link rel="stylesheet" href="donate.css" />
+
+    <title>Responsive dropdown menu - Bedimcode</title>
+  </head>
+  <body style="position: relative;">
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__data">
+          <a href="../home/home.html" class="nav__logo">
+              <i style="color: rgb(255, 4, 0);" class="ri-service-fill"></i> Friends Charity
+          </a>
+  
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
+          </div>
+        </div>
+  
+        <!--=============== NAV MENU ===============-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="../home/home.html" class="nav__link">Home</a></li>
+  
+            <li><a href="../donate/donate.html" class="nav__link"> <i style="color: red;" class="ri-hand-coin-line"></i> Donate</a></li>
+  
+            <!--=============== DROPDOWN 1 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link"> <i style="color: aquamarine;" class="ri-line-chart-line"></i>
+                Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+  
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../zakat-calculator/zakat-calculator.html" class="dropdown__link">
+                    <i class="ri-pie-chart-line"></i> Calculator
+                  </a>
+                </li>
+  
+            
+  
+                <!--=============== DROPDOWN SUBMENU ===============-->
+                <li class="dropdown__subitem">
+                  <div class="dropdown__linkk">
+
+                    <a  class="dropdown__link" href="../Analylitics/Report.html"><i class="ri-bar-chart-line"></i> Reports</a>
+                    
+                   
+                  </div>
+  
+
+                
+
+
+                </li>
+              </ul>
+            </li>
+  
+            <li> <a href="../campaign/campaign.html" class="nav__link"> <i style="color: rgb(117, 253, 7);" class="ri-notification-badge-fill"></i> OnGoing   </a></li>
+  
+            <!--=============== DROPDOWN 2 ===============-->
+            <li class="dropdown__item">
+              <div class="nav__link">
+                Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+              </div>
+  
+              <ul class="dropdown__menu">
+                <li>
+                  <a href="../profile/profile.html" class="dropdown__link">
+                    <i style="color: rgb(36, 104, 205);" class="ri-user-line"></i> Profiles
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="../Refund-policy/refund.html" class="dropdown__link">
+                      <i style="color: goldenrod;" class="ri-refund-2-line"></i> ReFund Policy
+                  </a>
+                </li>
+  
+                
+              </ul>
+            </li>
+  
+            <li><a href="../about/About.html" class="nav__link">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="filler"></div>
+
+    <div class="chk">
+
+    <style>
+      .video-background-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 40%; /* Aspect ratio for responsiveness */
+        overflow: hidden;
+      }
+      .video-background-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 1;
+        transition: filter 0.2s;
+      }
+      .video-mute-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+        background: rgba(0,0,0,0.6);
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        outline: none;
+        backdrop-filter: blur(2px);
+        transition: background 0.2s;
+      }
+      /* Responsive: Reduce video height on smaller screens */
+      @media (max-width: 800px) {
+        .video-background-container {
+          padding-bottom: 60%;
+        }
+      }
+      @media (max-width: 500px) {
+        .video-background-container {
+          padding-bottom: 100%;
+        }
+        .video-mute-btn {
+          top: 8px;
+          right: 8px;
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+        }
+      }
+    </style>
+
+    <div class="video-background-container" id="videoBgSection">
+      <video id="homeVideoBg"  muted poster="../Assets/poster.png" loop>
+        <!-- autoplay muted playsinline loop preload="auto" -->
+        <source src="../../experiment/nav-video/Storyboard-3.mp4" type="video/mp4" />
+        <!-- Optionally add .webm or .ogg for compatibility -->
+        Your browser does not support the video tag.
+      </video>
+      <button class="video-mute-btn" id="muteToggleBtn" aria-label="Toggle sound">
+        <span id="muteIcon">&#128263;</span>
+      </button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var video = document.getElementById("homeVideoBg");
+        var muteBtn = document.getElementById("muteToggleBtn");
+        var muteIcon = document.getElementById("muteIcon");
+        var container = document.getElementById("videoBgSection");
+
+        // Intersection Observer to play/pause on view
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                video.play().catch(()=>{});
+              } else {
+                video.pause();
+              }
+            });
+          }, {
+            threshold: 0
+          });
+          observer.observe(container);
+        } else {
+          // Fallback: Play on load
+          video.play().catch(()=>{});
+        }
+
+        // Mute/unmute toggle
+        function updateMuteIcon() {
+          muteIcon.textContent = video.muted ? "\uD83D\uDD07" : "\uD83D\uDD08";
+        }
+        muteBtn.addEventListener("click", function() {
+          video.muted = !video.muted;
+          updateMuteIcon();
+        });
+        container.addEventListener("click", function() {
+          video.muted = !video.muted;
+          updateMuteIcon();
+        });
+         
+        // Ensure mute icon is correct on load
+        // video.muted = false;
+        setTimeout(()=>{
+          video.muted = false;
+          updateMuteIcon();
+        },1500)
+        updateMuteIcon();
+        // In case autoplay policies prevent playback with sound
+        video.muted = true;
+      });
+    </script>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+    <!--================= donate-card =============-->
+
+    <div class="donate-card">
+      <div class="donation-card mobile-only">
+        <div class="card-header">DONATE TODAY</div>
+        <div class="card-body">
+          <div class="toggle-container">
+            <button class="toggle-btn">SINGLE</button>
+            <button class="toggle-btn active">MONTHLY</button>
+          </div>
+          <p class="mission-text">
+            To create a world of harmony where people of all backgrounds can
+            appreciate life with good health, education and a livelihood.
+          </p>
+
+          <div class="amount-presets">
+            <button class="amount-btn">£10</button>
+            <button class="amount-btn">£30</button>
+            <button class="amount-btn active">£50</button>
+            <button class="amount-btn">£100</button>
+          </div>
+
+          <div class="input-group">
+            <span class="currency">£</span>
+            <input type="number" value="50" />
+          </div>
+
+          <select class="dropdown">
+            <option>Where Most Needed</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Food Aid</option>
+            <option>Emergency Relief</option>
+  
+          </select>
+
+          <button class="cta-button">
+            DONATE NOW <span class="arrow">›</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="donation-bar desktop-only">
+        <div class="bar-container">
+          <div class="quick-donate-label">
+            <div class="icon-circle">❤️</div>
+            QUICK DONATE
+          </div>
+          <input type="text" placeholder="£ Amount" class="bar-input" />
+          <select class="bar-select">
+            <option>Monthly Donation</option>
+          </select>
+          <select class="bar-select">
+            <option>Where Most Needed</option>
+          </select>
+          <button class="bar-cta">
+            DONATE <span class="arrow-circle">›</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+ <!-- =============================stories========================= -->
+      
+    <section class="stories-section">
+      <h2 class="stories-title">Inspiring Stories</h2>
+      <div class="stories-cards">
+        <div class="story-card">
+          <div class="story-image-wrapper">
+            <img src="../Assets/aid.jpg" alt="Story 1" class="story-image" />
+          </div>
+          <div class="story-content">
+            <h3 class="story-heading">Maria's New Start</h3>
+            <p class="story-text">
+              Once struggling to afford education, Maria received a scholarship through generous donors. Now she is the first in her family to attend university and dreams of giving back.
+            </p>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-image-wrapper">
+            <img src="../Assets/aid1.jpg" alt="Story 2" class="story-image" />
+          </div>
+          <div class="story-content">
+            <h3 class="story-heading">Samir's Recovery</h3>
+            <p class="story-text">
+              After a life-changing operation funded through your donations, Samir can play with his friends and go to school again. Your support makes these moments possible.
+            </p>
+          </div>
+        </div>
+        <div class="story-card">
+          <div class="story-image-wrapper">
+            <img src="../Assets/aid2.jpg" alt="Story 3" class="story-image" />
+          </div>
+          <div class="story-content">
+            <h3 class="story-heading">A Community Transformed</h3>
+            <p class="story-text">
+              A village once plagued by unclean water now thrives, thanks to a new well project you helped fund. Health, happiness, and hope have returned to the community!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .stories-section {
+        margin: 48px auto 0 auto;
+        max-width: 1100px;
+        padding: 16px;
+      }
+
+      .stories-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 32px;
+        letter-spacing: 1px;
+      }
+
+      .stories-cards {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .story-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 36px rgba(0,0,0,0.08), 0 1.5px 6px rgba(55,80,200,0.04);
+        overflow: hidden;
+        width: 320px;
+        min-width: 240px;
+        max-width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: riseCard 1s cubic-bezier(.23,1.14,.86,1.12) backwards;
+        transition: transform 0.25s, box-shadow 0.25s;
+      }
+      .story-card:nth-child(1) { animation-delay: 0.1s; }
+      .story-card:nth-child(2) { animation-delay: 0.3s; }
+      .story-card:nth-child(3) { animation-delay: 0.5s; }
+
+      .story-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 12px 56px rgba(0,0,0,.14), 0 2px 12px rgba(55,80,200,0.08);
+      }
+      @keyframes riseCard {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .story-image-wrapper {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f4f6fa;
+      }
+      .story-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .story-card:hover .story-image {
+        transform: scale(1.07);
+      }
+      .story-content {
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        flex: 1;
+      }
+      .story-heading {
+        font-size: 1.15rem;
+        margin: 0 0 0.3rem 0;
+        font-weight: bold;
+        color: #465ab7;
+      }
+      .story-text {
+        font-size: 0.99rem;
+        color: #444;
+        margin: 0;
+        line-height: 1.5;
+      }
+      @media (max-width: 900px) {
+        .stories-cards {
+          gap: 1.25rem;
+        }
+        .story-card {
+          width: 90vw;
+          max-width: 340px;
+        }
+      }
+      @media (max-width: 700px) {
+        .stories-cards {
+          flex-direction: column;
+          align-items: center;
+        }
+        .story-card {
+          width: 98vw;
+          min-width: unset;
+          max-width: 400px;
+        }
+      }
+    </style>
+
+
+
+  <!-- =-========================courasel event======================= -->
+
+
+
+ 
+
+  <!-- Event Carousel (Swiper) -->
+  <section class="event-carousel-section">
+    <h2 class="event-title">Upcoming Events</h2>
+    <div class="event-swiper swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide event-slide">
+          <img src="../Assets/aid4.jpg" alt="Event 1" class="event-image" />
+          <div class="event-info">
+            <h3 class="event-heading">Charity Walk 2024</h3>
+            <p class="event-description">
+              Join our annual walk to support education projects around the world. Register now to make a difference!
+            </p>
+            <span class="event-date">April 22, 2024</span>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide event-slide">
+          <img src="../Assets/aid5.jpg" alt="Event 2" class="event-image" />
+          <div class="event-info">
+            <h3 class="event-heading">Food Drive</h3>
+            <p class="event-description">
+              Help us provide food packages to families in need. All volunteers are welcome.
+            </p>
+            <span class="event-date">May 10, 2024</span>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide event-slide">
+          <img src="../Assets/aid6.jpg" alt="Event 3" class="event-image" />
+          <div class="event-info">
+            <h3 class="event-heading">Summer Youth Camp</h3>
+            <p class="event-description">
+              Empower and inspire youth at our summer camp full of fun and learning activities.
+            </p>
+            <span class="event-date">June 15, 2024</span>
+          </div>
+        </div>
+      </div>
+      <!-- Pagination and Navigation -->
+      <div class="swiper-pagination event-pagination"></div>
+      <div class="swiper-button-prev event-button-prev"></div>
+      <div class="swiper-button-next event-button-next"></div>
+    </div>
+  </section>
+
+  <style>
+    .event-carousel-section {
+      max-width: 1100px;
+      margin: 56px auto 0 auto;
+      padding: 16px;
+    }
+    .event-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 32px;
+      color: #27336b;
+      letter-spacing: 1px;
+    }
+    .event-swiper {
+      width: 100%;
+    }
+    .event-slide {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px 0 rgba(27,48,106,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .event-slide:hover {
+      box-shadow: 0 12px 32px 0 rgba(27,48,106,0.16);
+    }
+    .event-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .event-info {
+      padding: 1.25rem 1rem 1rem 1rem;
+      text-align: left;
+      width: 100%;
+    }
+    .event-heading {
+      font-size: 1.12rem;
+      font-weight: bold;
+      margin: 0 0 0.5rem 0;
+      color: #465ab7;
+    }
+    .event-description {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    .event-date {
+      font-size: 0.98rem;
+      color: #27336b;
+      font-weight: 600;
+      background: #e8edff;
+      padding: 0.32em 0.75em;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    /* Swiper Pagination and Navigation Styling */
+    .event-pagination {
+      margin-top: 18px;
+      text-align: center;
+    }
+    .event-pagination .swiper-pagination-bullet {
+      background: #b5badb;
+      opacity: 1;
+    }
+    .event-pagination .swiper-pagination-bullet-active {
+      background: #465ab7;
+    }
+    .event-button-prev,
+    .event-button-next {
+      color: #465ab7;
+      top: 42%;
+      width: 40px;
+      height: 40px;
+      background: #e8edff;
+      border-radius: 50%;
+      box-shadow: 0 3px 7px 0 rgba(27,48,106,0.10);
+    }
+    .event-button-prev { left: 0; }
+    .event-button-next { right: 0; }
+    @media (max-width: 900px) {
+      .event-slide {
+        min-width: 320px;
+      }
+    }
+    @media (max-width: 600px) {
+      .event-slide {
+        min-width: unset;
+        max-width: 100vw;
+      }
+      .event-carousel-section {
+        padding: 8px;
+      }
+      .event-title {
+        font-size: 1.45rem;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper('.event-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        speed: 650,
+        pagination: {
+          el: '.event-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.event-button-next',
+          prevEl: '.event-button-prev',
+        },
+        autoplay: {
+          delay: 3800,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          700: {
+            slidesPerView: 2,
+            spaceBetween: 28,
+          },
+          1000: {
+            slidesPerView: 3,
+            spaceBetween: 32,
+          }
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+  
+
+  <!-- =-========================end   courasel event======================= -->
+
+
+
+
+
+
+<!-- =============================== achievement stats====================== -->
+<section class="achievement-stats-section">
+  <h2 class="stats-title">Our Impact In Numbers</h2>
+  <div class="stats-cards">
+    <div class="stat-card">
+      <div class="stat-icon-bg">
+        <i class="fas fa-users stat-icon"></i>
+      </div>
+      <div class="stat-number" data-target="24500">0</div>
+      <div class="stat-label">People Helped</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-bg">
+        <i class="fas fa-graduation-cap stat-icon"></i>
+      </div>
+      <div class="stat-number" data-target="120">0</div>
+      <div class="stat-label">Scholarships Awarded</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-bg">
+        <i class="fas fa-hand-holding-water stat-icon"></i>
+      </div>
+      <div class="stat-number" data-target="47">0</div>
+      <div class="stat-label">Wells Built</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon-bg">
+        <i class="fas fa-hands-helping stat-icon"></i>
+      </div>
+      <div class="stat-number" data-target="138">0</div>
+      <div class="stat-label">Communities Supported</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.achievement-stats-section {
+  max-width: 1100px;
+  margin: 56px auto 0 auto;
+  padding: 32px 16px;
+  background: linear-gradient(110deg, #eaf3f8 30%, #f7effa 70%);
+  border-radius: 36px;
+  box-shadow: 0 10px 40px 0 rgba(57, 73, 171, 0.08);
+  text-align: center;
+}
+.stats-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #27336b;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+.stats-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat-card {
+  background: white;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.06);
+  border-radius: 22px;
+  padding: 32px 30px 24px 30px;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .2s cubic-bezier(.45,1.45,.55,1);
+  position: relative;
+  overflow: hidden;
+  animation: statFadeIn .6s ease;
+}
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.07);
+}
+@keyframes statFadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.stat-icon-bg {
+  background: linear-gradient(135deg, #50b9e8 28%, #a288e6 100%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 15px 0 rgba(56,77,179,0.18);
+  animation: rotateIcon 2.6s infinite linear;
+}
+@keyframes rotateIcon {
+  0% { transform: rotate(-2deg);}
+  80% { transform: rotate(7deg);}
+  100% { transform: rotate(-2deg);}
+}
+.stat-icon {
+  font-size: 2rem;
+  color: #fff;
+}
+.stat-number {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #27336b;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  margin-top: 3px;
+  /* Add modern glow */
+  text-shadow: 0 2px 12px rgba(80, 185, 232, 0.20), 0 2px 0 white;
+  min-height: 2.3rem;
+  transition: color 0.2s;
+}
+.stat-label {
+  font-size: 1.08rem;
+  color: #56648A;
+  margin-top: 4px;
+  letter-spacing: 0.4px;
+}
+@media(max-width: 900px) {
+  .stats-cards {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .stat-card {
+    padding: 28px 18px 20px 18px;
+    min-width: 140px;
+  }
+}
+@media(max-width: 700px) {
+  .stats-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Animation function for stats count-up
+    function animateStat(el, start, end, duration) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        el.textContent = value.toLocaleString();
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = end.toLocaleString();
+        }
+      };
+      requestAnimationFrame(step);
+    }
+    // Trigger animation when stats come into view
+    let triggered = false;
+    function handleStatsAnimation() {
+      const section = document.querySelector('.achievement-stats-section');
+      if (!section || triggered) return;
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        document.querySelectorAll('.stat-number').forEach(el => {
+          const target = parseInt(el.getAttribute('data-target'), 10);
+          animateStat(el, 0, target, 1400 + Math.random()*800);
+        });
+        triggered = true;
+        window.removeEventListener('scroll', handleStatsAnimation);
+      }
+    }
+    window.addEventListener('scroll', handleStatsAnimation);
+    // In case above-the-fold
+    handleStatsAnimation();
+  });
+</script>
+
+
+<!-- =============================== achievement stats====================== -->
+
+
+
+
+
+
+
+    <!-- ----------------------------------------cardslider------------------------------------------ -->
+
+    <!-- <div class="slider-container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="Software Developer.jpg"
+                alt="card image"
+                class="card-image"
+              />
+              <p class="badge">developer</p>
+              <h2 class="card-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="Software Developer.jpg"
+                alt="card image"
+                class="card-image"
+              />
+              <p class="badge">gamer</p>
+              <h2 class="card-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="Software Developer.jpg"
+                alt="card image"
+                class="card-image"
+              />
+              <p class="badge">photographer</p>
+              <h2 class="card-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="Software Developer.jpg"
+                alt="card image"
+                class="card-image"
+              />
+              <p class="badge">eng</p>
+              <h2 class="card-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img
+                src="Software Developer.jpg"
+                alt="card image"
+                class="card-image"
+              />
+              <p class="badge">doctor</p>
+              <h2 class="card-title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing.
+              </h2>
+              <button class="card-button material-symbols-rounded">
+                arrow_forward
+              </button>
+            </a>
+          </li>
+        </ul>
+
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+
+    <!-- --------------------------------footer-------------------------->
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>MENU</h3>
+          <ul>
+            <li><a href="../about/About.html">About</a></li>
+           
+            <li><a href="../donate/donate.html">Donate</a></li>
+            <li><a href="../donate/donate.html">Way to donate</a></li>
+            <li><a href="../form/form.html">Get Involved</a></li>
+            <li><a href="../apply-for-donation/apply.html">Apply for Donation</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>APPEALS</h3>
+          <ul>
+            
+            <li><a href="../campaign/campaign.html">Campaign</a></li>
+        
+            <li><a href="../zakat-calculator/zakat-calculator.html">Zakah Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>LEGAL</h3>
+          <ul>
+            <li><a href="../terms-condition/privacy-policy.html">Terms & Conditions</a></li>
+            
+            <li><a href="../Refund-policy/refund.html">Refund Policy</a></li>
+      
+          </ul>
+        </div>
+
+        <div class="footer-col contact-details">
+          <h3>OUR DETAILS</h3>
+          <p> <a style="text-decoration: none; color: white;" href="tel:+447424712223"><i class="fas fa-phone"></i>  +447424712223</a> </p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quos, explicabo!
+          </p>
+          <p>  <i class="fas fa-envelope"></i> Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="footer-col branding">
+          <div class="logo-area">
+            <!-- <img
+              src="https://via.placeholder.com/150x50?text=MUSLIM+CHARITY"
+              alt="Friends Charity Logo"
+            /> -->
+            <h2>  <i style="color: rgb(255, 4, 0);font-size: 1.5rem;" class="ri-service-fill"></i>Friends Charity</h2>
+
+            <p class="reg-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, expedita.
+            </p>
+          </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61555455520722"><i class="fab fa-facebook-f"></i></a>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../Assets/nav-main.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+   
+
+    <!-- cdn for card slider -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="card-slider-script.js"></script>
+
+    <!-- ========== donation js -->
+    <script src="donationi-card.js"></script>
+  </body>
+</html>
