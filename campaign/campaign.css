@@ -1,0 +1,307 @@
+
+.campaign-carousel-container {
+    max-width: 1200px;
+    margin: 48px auto 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.campaign-carousel-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #222c36;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.swiper {
+    width: 100%;
+    padding-bottom: 44px;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 34px 0 rgba(60,72,93,0.13), 0 1.5px 5.5px 0 rgba(60,72,93,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(.45,.05,.55,.95), box-shadow 0.5s cubic-bezier(.45,.05,.55,.95);
+    will-change: transform;
+    opacity: 0;
+    transform: translateY(48px) scale(0.95);
+    /* Animation will set these to visible */
+}
+
+.swiper-slide.swiper-slide-active,
+.swiper-slide.swiper-slide-next,
+.swiper-slide.swiper-slide-prev {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 10px 42px 0 rgba(60,72,93,0.18), 0 1.5px 9px 0 rgba(60,72,93,0.12);
+}
+
+.campaign-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.campaign-details {
+    padding: 26px 18px 20px 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campaign-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #304050;
+    margin-bottom: 8px;
+}
+
+.campaign-desc {
+    font-size: 1.01rem;
+    color: #566372;
+    margin-bottom: 22px;
+    line-height: 1.4;
+    min-height: 55px;
+}
+
+.campaign-cta {
+    display: inline-block;
+    padding: 8px 22px;
+    background: linear-gradient(90deg, #189ad9 42%, #66cc99 100%);
+    color: #fff;
+    border-radius: 26px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .25s, box-shadow .25s, transform .12s;
+    box-shadow: 0 2px 10px 0 rgba(24,154,217,0.14);
+}
+.campaign-cta:hover {
+    background: linear-gradient(90deg, #138fc2 40%, #42b67d 100%);
+    transform: translateY(-2px) scale(1.045);
+}
+
+@media (max-width: 900px) {
+    .swiper {
+        padding-bottom: 38px;
+    }
+    .campaign-img {
+        height: 150px;
+    }
+    .campaign-carousel-title {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    .campaign-carousel-title {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+    }
+    .campaign-img {
+        height: 120px;
+    }
+    .swiper-slide {
+        border-radius: 11px;
+    }
+    .campaign-details {
+        padding: 14px 10px 12px 10px;
+    }
+    .campaign-title {
+        font-size: 1.08rem;
+    }
+    .campaign-cta {
+        font-size: 0.95rem;
+        padding: 7px 16px;
+    }
+}
+
+
+
+
+
+
+
+  .pie-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    max-width: 400px;
+    width: 95vw;
+    box-shadow: 0 4px 24px 4px rgba(30, 40, 90, 0.08);
+    border-radius: 22px;
+    padding: 24px 12px 22px 12px;
+    background: #fcfcfe;
+  }
+  .pie-chart-title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #22326C;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  .pie-chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 22px;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .pie-chart-legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    gap: 8px;
+    color: #344473;
+  }
+  .pie-chart-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1.5px solid #ddeaff;
+  }
+  @media (max-width: 550px) {
+    .pie-chart-container {
+      max-width: 98vw;
+      padding: 13px 2px 16px 2px;
+    }
+    .pie-chart-title {
+      font-size: 1.02rem;
+      margin-bottom: 10px;
+    }
+    .pie-chart-legend-item {
+      font-size: 0.89rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+.quick-donate-section {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  padding: 0 20px 70px 20px;
+  box-sizing: border-box;
+}
+
+.quick-donate-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23405a;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+
+.quick-donate-cards {
+  display: flex;
+  gap: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quick-donate-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(35,64,90,0.11), 0 1.5px 6px 0 rgba(35,64,90,0.08);
+  padding: 28px 32px;
+  min-width: 230px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: opacity 0.6s cubic-bezier(.55,.08,.53,.97), transform 0.6s cubic-bezier(.55,.08,.53,.97);
+  will-change: opacity, transform;
+}
+
+.quick-donate-card.animated {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.quick-donate-amount {
+  font-size: 2.1rem;
+  color: #2972fc;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.quick-donate-desc {
+  font-size: 1.04rem;
+  color: #23405a;
+  margin-bottom: 18px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.quick-donate-btn {
+  background: linear-gradient(92deg, #2972fc 42%, #00d4c6 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 38px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.16s;
+  margin-top: auto;
+}
+
+.quick-donate-btn:active {
+  transform: scale(0.97);
+  background: linear-gradient(92deg, #255de8 42%, #06c1b5 100%);
+}
+
+@media (max-width: 850px) {
+  .quick-donate-cards {
+    gap: 18px;
+  }
+  .quick-donate-card {
+    min-width: 180px;
+    max-width: 55vw;
+    padding: 18px 12px;
+  }
+}
+@media (max-width: 650px) {
+  .quick-donate-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .quick-donate-card {
+    max-width: 98vw;
+    width: 94vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
