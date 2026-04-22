@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ways to Donate</title>
+
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
+
+<!-- =======card-slider-css -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+
+
+
+<link rel="stylesheet" href="donate.css">
+  <link rel="stylesheet" href="../Assets/nav-styles.css">
+  <link rel="stylesheet" href="../Assets/footer-style.css">
+
+ 
+</head>
+
+<body>
+
+
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="../home/home.html" class="nav__logo">
+            <i style="color: rgb(255, 4, 0);" class="ri-service-fill"></i> Friends Charity
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../home/home.html" class="nav__link">Home</a></li>
+
+          <li><a href="../donate/donate.html" class="nav__link"> <i style="color: red;" class="ri-hand-coin-line"></i> Donate</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link"> <i style="color: aquamarine;" class="ri-line-chart-line"></i>
+              Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="../zakat-calculator/zakat-calculator.html" class="dropdown__link">
+                  <i class="ri-pie-chart-line"></i> Calculator
+                </a>
+              </li>
+
+          
+
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem">
+                <div class="dropdown__linkk">
+
+                  <a  class="dropdown__link" href="../Analylitics/Report.html"><i class="ri-bar-chart-line"></i> Reports</a>
+                  
+                 
+                </div>
+
+
+              
+
+
+              </li>
+            </ul>
+          </li>
+
+          <li> <a href="../campaign/campaign.html" class="nav__link"> <i style="color: rgb(117, 253, 7);" class="ri-notification-badge-fill"></i> OnGoing   </a></li>
+
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link">
+              Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="../profile/profile.html" class="dropdown__link">
+                  <i style="color: rgb(36, 104, 205);" class="ri-user-line"></i> Profiles
+                </a>
+              </li>
+
+              <li>
+                <a href="../Refund-policy/refund.html" class="dropdown__link">
+                    <i style="color: goldenrod;" class="ri-refund-2-line"></i> ReFund Policy
+                </a>
+              </li>
+
+              
+            </ul>
+          </li>
+
+          <li><a href="../about/About.html" class="nav__link">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="filler"></div>
+
+  <h1>Ways to Donate</h1>
+
+  <div class="donate-p-container">
+
+    <!-- Bank Transfer -->
+    <div class="donate-p-card">
+      <div class="donate-p-icon">💳</div>
+      <h2>Bank Transfer</h2>
+      <p>Transfer money directly into our charity account.</p>
+      <ul>
+        <li><strong>Bank:</strong> HSBC</li>
+        <li><strong>Account Name:</strong> friend Charity</li>
+        <li><strong>Account No:</strong> 41369989</li>
+        <li><strong>Sort Code:</strong> 40-38-11</li>
+        <li><strong>IBAN:</strong> Lorem ipsum dolor sit amet.GB68 HBUK 403811 41369989</li>
+        <li><strong>SWIFT:</strong> Lorem ipsum dolor sit amet.</li>
+      </ul>
+    </div>
+
+    <!-- Telephone -->
+    <div class="donate-p-card">
+      <div class="donate-p-icon">📞</div>
+      <h2>Telephone</h2>
+      <p>Make a donation using your debit/credit card.</p>
+      <ul>
+        <li><strong>Call:</strong> +44 (0) 207 100 4930</li>
+      </ul>
+    </div>
+
+    <!-- Post -->
+    <div class="donate-p-card">
+      <div class="donate-p-icon">✉️</div>
+      <h2>Post</h2>
+      <p>Send a cheque or postal order to our address.</p>
+      <ul>
+        <li>Muslim Charity, Eaton Hall</li>
+        <li>Retford</li>
+        <li>DN22 0PR (UK)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  
+ 
+<!-- Yearly Donation Bar Chart -->
+<div class="donate-p-donation-bar-chart-container">
+  <h2 class="donate-p-chart-title">Yearly Donation Overview</h2>
+  <canvas id="donate-p-donationBarChart" aria-label="Yearly Donation Bar Chart" role="img"></canvas>
+</div>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<style>
+
+</style>
+ 
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>MENU</h3>
+      <ul>
+        <li><a href="../about/About.html">About</a></li>
+       
+        <li><a href="../donate/donate.html">Donate</a></li>
+        <li><a href="../donate/donate.html">Way to donate</a></li>
+        <li><a href="../form/form.html">Get Involved</a></li>
+        <li><a href="../apply-for-donation/apply.html">Apply for Donation</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>APPEALS</h3>
+      <ul>
+        
+        <li><a href="../campaign/campaign.html">Campaign</a></li>
+    
+        <li><a href="../zakat-calculator/zakat-calculator.html">Zakah Calculator</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>LEGAL</h3>
+      <ul>
+        <li><a href="../terms-condition/privacy-policy.html">Terms & Conditions</a></li>
+        
+        <li><a href="../Refund-policy/refund.html">Refund Policy</a></li>
+  
+      </ul>
+    </div>
+
+    <div class="footer-col contact-details">
+      <h3>OUR DETAILS</h3>
+      <p> <a style="text-decoration: none; color: white;" href="tel:+447424712223"><i class="fas fa-phone"></i>  +447424712223</a> </p>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quos, explicabo!
+      </p>
+      <p>  <i class="fas fa-envelope"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="footer-col branding">
+      <div class="logo-area">
+        <!-- <img
+          src="https://via.placeholder.com/150x50?text=MUSLIM+CHARITY"
+          alt="Friends Charity Logo"
+        /> -->
+        <h2>  <i style="color: rgb(255, 4, 0);font-size: 1.5rem;" class="ri-service-fill"></i>Friends Charity</h2>
+
+        <p class="reg-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, expedita.
+        </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555455520722"><i class="fab fa-facebook-f"></i></a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="donate.js"></script>
+
+<script src="../Assets/nav-main.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: donate-p-fadeDown 0.8s ease forwards;
+}
+
+.donate-p-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.donate-p-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.donate-p-card.donate-p-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+.donate-p-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.donate-p-icon {
+  width: 60px;
+  height: 60px;
+  background: #e11d48;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+h2 { margin-bottom: 10px; }
+
+p { color: #555; margin-bottom: 10px; font-size: 14px; }
+
+ul { font-size: 14px; color: #333; }
+
+ul li { margin-bottom: 5px; }
+
+@keyframes donate-p-fadeDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+}
+
+.donate-p-donation-bar-chart-container {
+    max-width: 730px;
+    margin: 58px auto 0;
+    background: #f7fafc;
+    border-radius: 18px;
+    box-shadow: 0 4px 22px 0 rgba(60, 72, 93, 0.09);
+    padding: 32px 40px 28px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

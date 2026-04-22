@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Policy</title>
+  <!-- SwiperJS Carousel CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <style>
+   
+  </style>
+
+
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
+
+<!-- =======card-slider-css -->
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward"
+/>
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+
+
+
+
+<link rel="stylesheet" href="../Assets/nav-styles.css">
+<link rel="stylesheet" href="../Assets/footer-style.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="refund.css">
+</head>
+
+
+<body>
+
+
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="../home/home.html" class="nav__logo">
+            <i style="color: rgb(255, 4, 0);" class="ri-service-fill"></i> Friends Charity
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__burger"></i>
+          <i class="ri-close-line nav__close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="../home/home.html" class="nav__link">Home</a></li>
+
+          <li><a href="../donate/donate.html" class="nav__link"> <i style="color: red;" class="ri-hand-coin-line"></i> Donate</a></li>
+
+          <!--=============== DROPDOWN 1 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link"> <i style="color: aquamarine;" class="ri-line-chart-line"></i>
+              Analytics <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="../zakat-calculator/zakat-calculator.html" class="dropdown__link">
+                  <i class="ri-pie-chart-line"></i> Calculator
+                </a>
+              </li>
+
+          
+
+              <!--=============== DROPDOWN SUBMENU ===============-->
+              <li class="dropdown__subitem">
+                <div class="dropdown__linkk">
+
+                  <a  class="dropdown__link" href="../Analylitics/Report.html"><i class="ri-bar-chart-line"></i> Reports</a>
+                  
+                 
+                </div>
+
+
+              
+
+
+              </li>
+            </ul>
+          </li>
+
+          <li> <a href="../campaign/campaign.html" class="nav__link"> <i style="color: rgb(117, 253, 7);" class="ri-notification-badge-fill"></i> OnGoing   </a></li>
+
+          <!--=============== DROPDOWN 2 ===============-->
+          <li class="dropdown__item">
+            <div class="nav__link">
+              Users <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+            </div>
+
+            <ul class="dropdown__menu">
+              <li>
+                <a href="../profile/profile.html" class="dropdown__link">
+                  <i style="color: rgb(36, 104, 205);" class="ri-user-line"></i> Profiles
+                </a>
+              </li>
+
+              <li>
+                <a href="../Refund-policy/refund.html" class="dropdown__link">
+                    <i style="color: goldenrod;" class="ri-refund-2-line"></i> ReFund Policy
+                </a>
+              </li>
+
+              
+            </ul>
+          </li>
+
+          <li><a href="../about/About.html" class="nav__link">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="filler"></div>
+
+
+  <!-- HERO -->
+  <section class="refund-hero">
+    <h1>REFUND POLICY</h1>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="refund-container">
+    <p>
+      At Friends Charity, we work hard to ensure you have a trouble-free journey when making a donation and we want to make it as smooth as possible. However, we realise that sometimes errors can happen.
+    </p>
+    <p>
+      Friends Charity is generally not able to refund donations but we will consider a refund of any duplicate donations made in error (if, for example, you clicked on the Donate button more than once).
+    </p>
+    <p>
+      If you have made a duplicate donation(s) by mistake, please contact our Donations Processing team on 
+      <strong></strong> or email 
+      <strong>Friends</strong>.
+    </p>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="refund-newsletter">
+    <h2>Sign up to our Newsletter</h2>
+    <input type="email" id="email" placeholder="Enter your email">
+    <button onclick="subscribe()">Subscribe</button>
+  </section>
+
+  <!-- CAROUSEL / TESTIMONIALS -->
+  <section class="refund-carousel-section">
+    <div class="refund-carousel-header">
+      What our supporters say
+    </div>
+    <div class="swiper refund-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://randomuser.me/api/portraits/men/37.jpg" class="slide-avatar" alt="Supporter 1">
+          <div class="slide-quote">"Fast and friendly support regarding my donation query. Thank you Friends Charity!"</div>
+          <div class="slide-name">– Adam Khan</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://randomuser.me/api/portraits/women/52.jpg" class="slide-avatar" alt="Supporter 2">
+          <div class="slide-quote">"The refund process for my duplicate donation was smooth and reassuring."</div>
+          <div class="slide-name">– Sara Ali</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://randomuser.me/api/portraits/men/20.jpg" class="slide-avatar" alt="Supporter 3">
+          <div class="slide-quote">"Very helpful team. Appreciated the quick response on my email inquiry."</div>
+          <div class="slide-name">– Rizwan Patel</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://randomuser.me/api/portraits/women/62.jpg" class="slide-avatar" alt="Supporter 4">
+          <div class="slide-quote">"So grateful for how Friends Charity put customers’ peace of mind first!"</div>
+          <div class="slide-name">– Yasmin Yaqoob</div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- CHAT BUTTON -->
+  <div class="refund-chat-btn" onclick="chat()">
+    💬 Chat with us
+  </div>
+
+  
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>MENU</h3>
+      <ul>
+        <li><a href="../about/About.html">About</a></li>
+       
+        <li><a href="../donate/donate.html">Donate</a></li>
+        <li><a href="../donate/donate.html">Way to donate</a></li>
+        <li><a href="../form/form.html">Get Involved</a></li>
+        <li><a href="../apply-for-donation/apply.html">Apply for Donation</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>APPEALS</h3>
+      <ul>
+        
+        <li><a href="../campaign/campaign.html">Campaign</a></li>
+    
+        <li><a href="../zakat-calculator/zakat-calculator.html">Zakah Calculator</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>LEGAL</h3>
+      <ul>
+        <li><a href="../terms-condition/privacy-policy.html">Terms & Conditions</a></li>
+        
+        <li><a href="../Refund-policy/refund.html">Refund Policy</a></li>
+  
+      </ul>
+    </div>
+
+    <div class="footer-col contact-details">
+      <h3>OUR DETAILS</h3>
+      <p> <a style="text-decoration: none; color: white;" href="tel:+447424712223"><i class="fas fa-phone"></i>  +447424712223</a> </p>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quos, explicabo!
+      </p>
+      <p>  <i class="fas fa-envelope"></i> Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="footer-col branding">
+      <div class="logo-area">
+        <!-- <img
+          src="https://via.placeholder.com/150x50?text=MUSLIM+CHARITY"
+          alt="Friends Charity Logo"
+        /> -->
+        <h2>  <i style="color: rgb(255, 4, 0);font-size: 1.5rem;" class="ri-service-fill"></i>Friends Charity</h2>
+
+        <p class="reg-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, expedita.
+        </p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555455520722"><i class="fab fa-facebook-f"></i></a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../Assets/nav-main.js"></script>
+<script src="./refund.js"></script>
+
+
+</body>
+</html>
