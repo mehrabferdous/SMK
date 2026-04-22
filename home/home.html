@@ -239,10 +239,10 @@
          
         // Ensure mute icon is correct on load
         // video.muted = false;
-        // setTimeout(()=>{
-        //   video.muted = false;
-        //   updateMuteIcon();
-        // },1500)
+         setTimeout(()=>{
+           video.muted = false;
+           updateMuteIcon();
+         },1500)
         updateMuteIcon();
         // In case autoplay policies prevent playback with sound
         video.muted = true;
